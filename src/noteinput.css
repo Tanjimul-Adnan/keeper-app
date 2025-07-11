@@ -1,0 +1,197 @@
+/* Note Input Modal */
+.noteInputContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+.noteInputContainer input,
+.noteInputContainer textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.noteInputContainer button {
+    margin-right: 10px;
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.noteInputContainer button.closeBtn {
+    background-color: #f44336;
+}
+
+/* Notes Container */
+.notesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+.notebody {
+    width: 22%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+.notetitle {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.notecontent {
+    font-size: 1em;
+    color: gray;
+    text-align: justify;
+}
+
+
+/* Apply opacity to the background of the website */
+body {
+    background-color: #f0f0f0; /* Set a light background color */
+    opacity: 0.9; /* Set opacity for the background */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    
+}
+
+/* When the modal is active, keep the body background opacity reduced */
+body.modal-active {
+    opacity: 0.5; /* Reduce opacity when modal is active */
+}
+
+/* Container for the note input modal */
+.noteInputContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* White background for modal */
+    padding: 25px 30px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    z-index: 1000;
+    width: 100%;
+    max-width: 400px; /* Limit modal width */
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+/* Overlay for the input container */
+.noteInputOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 999;
+}
+
+
+/* Container for note input modal */
+.noteInputContainer {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff; /* White background */
+    padding: 25px 30px;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+    z-index: 1000;
+    width: 100%;
+    max-width: 400px; /* Limit modal width */
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif; /* Clean font */
+}
+
+/* Input field styles */
+.noteInputContainer input,
+.noteInputContainer textarea {
+    width: 100%;
+    margin-bottom: 15px; /* Space between fields */
+    padding: 12px 15px; /* Padding inside fields */
+    border: 1px solid #ccc; /* Subtle border */
+    border-radius: 8px; /* Rounded input corners */
+    font-size: 16px; /* Readable font size */
+    box-sizing: border-box; /* Include padding and border in width */
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.3s ease; /* Smooth hover effect */
+}
+
+/* Focus effect for input fields */
+.noteInputContainer input:focus,
+.noteInputContainer textarea:focus {
+    border-color: #4caf50; /* Green border on focus */
+    box-shadow: 0px 0px 5px rgba(76, 175, 80, 0.5); /* Add subtle shadow */
+}
+
+/* Input field for the title */
+.noteInputContainer input {
+    font-weight: bold; /* Bold font for title */
+    height: 40px; /* Set height for input */
+}
+
+/* Textarea for note content */
+.noteInputContainer textarea {
+    height: 100px; /* Fixed height for content */
+    resize: none; /* Disable resizing */
+}
+
+/* Button styles */
+.noteInputContainer button {
+    padding: 10px 20px; /* Add padding to buttons */
+    font-size: 16px; /* Larger font for buttons */
+    font-weight: bold; /* Bold text for buttons */
+    border: none; /* Remove default border */
+    border-radius: 8px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth color transition */
+    margin-right: 23%;
+    
+}
+
+/* Submit button */
+.noteInputContainer button.submitBtn {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+}
+
+.noteInputContainer button.submitBtn:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Close button */
+.noteInputContainer button.closeBtn {
+    background-color: #f44336; /* Red background */
+    color: white; /* White text */
+}
+
+.noteInputContainer button.closeBtn:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+}
+
+/* Overlay for the input container */
+.noteInputOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 999;
+}

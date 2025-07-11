@@ -5,14 +5,12 @@ function foot(){
 
     const dat = new Date().getFullYear()
 
-    return <div>
-        <footer>
+    return <footer>
             <p>
-                Copyright {dat}
+                Copyright © {dat}
             </p>
             
         </footer>
-    </div>
 }
 
 export default foot

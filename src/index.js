@@ -1,13 +1,14 @@
-import react from "react"
-import readtDom from "react-dom"
-import Head from "./header"
-import Foot from "./footer"
+import React from "react";
+import ReactDOM from "react-dom";
+import Head from "./header.js";
+import Foot from "./footer.js";
+import Note from "./note.js";
 
-readtDom.render(
+ReactDOM.render(
   <div>
     <Head />
+    {/* <Note /> */}
     <Foot />
-    
   </div>,
   document.getElementById("root")
-)
+);
