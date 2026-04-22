@@ -44,7 +44,7 @@ jobs:
       - name: Build Frontend Image
         uses: docker/build-push-action@v5
         with:
-          context: ./frontend
+          context: .
           push: true
           tags: ${{ secrets.DOCKERHUB_USERNAME }}/keeper
 
