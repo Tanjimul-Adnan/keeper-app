@@ -32,8 +32,11 @@ router.post("/", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const note = await Note.findById(req.params.id);
-    if (req.body.title) note.title = req.body.title;
-    if (req.body.content) note.content = req.body.content;
+    if (!note) {
+      return res.status(404).json({ message: "Note not found" });
+    }
+    if (req.body.title !== undefined) note.title = req.body.title;
+    if (req.body.content !== undefined) note.content = req.body.content;
     const updatedNote = await note.save();
     res.json(updatedNote);
   } catch (error) {
@@ -44,7 +47,10 @@ router.put("/:id", async (req, res) => {
 // DELETE a note
 router.delete("/:id", async (req, res) => {
   try {
-    await Note.findByIdAndDelete(req.params.id);
+    const deletedNote = await Note.findByIdAndDelete(req.params.id);
+    if (!deletedNote) {
+      return res.status(404).json({ message: "Note not found" });
+    }
     res.json({ message: "Note deleted" });
   } catch (error) {
     res.status(500).json({ message: error.message });
