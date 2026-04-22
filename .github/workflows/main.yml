@@ -36,6 +36,7 @@ jobs:
           echo "Backend dependencies installed successfully"
 
       - name: Test Docker build
+        # This ensures it runs in the root where your main docker-compose.yml is
         run: docker compose build --no-cache
 
   build-and-deploy:
