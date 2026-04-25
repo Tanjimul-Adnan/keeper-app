@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import DeleteIcon from '@mui/icons-material/Delete';
+import ModeIcon from '@mui/icons-material/Mode';
+import SaveIcon from '@mui/icons-material/Save';
+import CancelIcon from '@mui/icons-material/Cancel';
 
 function Note(props) {
   const [isEditing, setIsEditing] = useState(false);
@@ -42,15 +46,23 @@ function Note(props) {
             onChange={(e) => setEditContent(e.target.value)}
             placeholder="Content"
           />
-          <button onClick={handleSave}>SAVE</button>
-          <button onClick={handleCancel}>CANCEL</button>
+          <button onClick={handleSave}>
+            <SaveIcon />
+          </button>
+          <button onClick={handleCancel}>
+            <CancelIcon />
+          </button>
         </>
       ) : (
         <>
           <h1>{props.title}</h1>
           <p>{props.content}</p>
-          <button onClick={handleEdit}>EDIT</button>
-          <button onClick={handleClick}>DELETE</button>
+          <button onClick={handleEdit}>
+            <ModeIcon />
+          </button>
+          <button onClick={handleClick}>
+            <DeleteIcon />
+          </button>
         </>
       )}
     </div>

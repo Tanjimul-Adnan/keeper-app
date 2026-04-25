@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import AddIcon from '@mui/icons-material/Add';
+import Zoom from '@mui/material/Zoom';
 
 function CreateArea(props) {
   const [note, setNote] = useState({
@@ -42,9 +44,11 @@ function CreateArea(props) {
           placeholder="Take a note..."
           rows="3"
         />
-        <button type="submit" onClick={submitNote}>
-          Add
+       
+        <button color="primary" type="submit" onClick={submitNote}>
+          <AddIcon />
         </button>
+        
       </form>
     </div>
   );
